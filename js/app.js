@@ -17,7 +17,8 @@ form.addEventListener('submit', (e) =>{
 
     //Check for selects
     if(currencySelect === '' || cryptocurrencySelect === ''){
-        
+        //display error
+        ui.printMessage('Some empty fields', 'deep-orange darken-4 card-panel')
     }else{
         
     }
