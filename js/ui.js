@@ -40,4 +40,25 @@ class UI{
         }, 3000);
 
     }
+
+    displayResults(result){
+        let  currencyName;
+
+        currencyName = 'price_' + currency.toLowerCase();
+        const value = result[currencyName];
+
+        let  HTMLtemplate = '';
+
+        HTMLtemplate += `
+            <div class="card-content white-text">
+                <div class="card-content white-text">
+                    <span class="card-tittle">Result</span>
+                    <p>The Price of ${result.name} from ${currency} is ${value}</p>
+                </div>
+            </div>
+        `;
+        
+        const divResult = document.querySelector('#result');
+        divResult.innerHTML = HTMLtemplate;
+    }
 }
