@@ -20,6 +20,9 @@ form.addEventListener('submit', (e) =>{
         //display error
         ui.printMessage('Some empty fields', 'deep-orange darken-4 card-panel')
     }else{
-        
+        cryptoAPI.queryAPI(currencySelect. cryptoCurrencySelect)
+        .then(data => {
+            ui.displayResult(data.result[0]);
+        })
     }
 })
